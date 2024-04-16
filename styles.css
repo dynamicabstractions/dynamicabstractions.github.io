@@ -1,0 +1,82 @@
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: monospace;
+    font-size:1.1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: flex-start; /* Aligns items to the top */
+    height: 100vh;
+    padding: 20px 0; /* Adds top and bottom padding to the container */
+}
+
+main {
+    max-width: 650px; /* Fixed width for the main content */
+    padding: 20px;
+    /* background-color: #f9f9f9;  */
+    /* Light background for the content area */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adds shadow for better focus */
+    overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    height: 100%; /* Ensures aside takes full height */
+}
+
+.toc {
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toc h2 {
+    margin-top: 0;
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc li a {
+    text-decoration: none;
+    color: blue;
+}
+
+/* .toc a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+}
+.toc a.active {
+    color: #007bff;
+} */
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 950px) {
+    .toc {
+        display: none;  /* Hide TOC on smaller screens */
+    }
+    .content {
+        width: 100%;  /* Make content take full width */
+        margin: 0;  /* Remove margins */
+        padding: 10px;  /* Adjust padding for smaller screens */
+    }
+}
