@@ -10,6 +10,40 @@ html {
     scroll-behavior: smooth;
 }
 
+blockquote {
+    margin-bottom: 130px;
+}
+
+p {
+   line-height: 1.4;
+}
+
+.left-aligned {
+    text-align: left;
+    width: 80%;         /* Set the width of the paragraph */
+    margin-right: auto;  /* Auto margin on the left to push it to the right */
+    margin-left: 0;   
+}
+
+.right-aligned {
+    text-align: right;
+    width: 80%;         /* Set the width of the paragraph */
+    margin-left: auto;  /* Auto margin on the left to push it to the right */
+    margin-right: 0;   
+}
+
+.center-aligned {
+    text-align: center;
+}
+
+#background > p {
+    margin-bottom: 40px;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
 .content::-webkit-scrollbar {
     display: none;
 }
@@ -22,8 +56,9 @@ html {
 }
 
 main {
-    max-width: 650px; /* Fixed width for the main content */
-    padding: 20px;
+    max-width: 750px; /* Fixed width for the main content */
+    width: 60%;
+    padding: 70px;
     /* background-color: #f9f9f9;  */
     /* Light background for the content area */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adds shadow for better focus */
