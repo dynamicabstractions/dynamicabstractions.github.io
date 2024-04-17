@@ -18,6 +18,11 @@ p {
    line-height: 1.4;
 }
 
+h2 {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
 .left-aligned {
     text-align: left;
     width: 80%;         /* Set the width of the paragraph */
@@ -34,6 +39,9 @@ p {
 
 .center-aligned {
     text-align: center;
+    width: 80%;
+    margin-left: auto;  /* Auto margin on the left to push it to the right */
+    margin-right: auto;   
 }
 
 #background > p {
@@ -93,16 +101,58 @@ aside {
     color: blue;
 }
 
-/* .toc a {
-    display: block;
-    padding: 8px 16px;
-    text-decoration: none;
-    color: black;
+.horizontal-line-long {
+    opacity: 60%;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-.toc a.active {
-    color: #007bff;
-} */
 
+.horizontal-line-short {
+    opacity: 60%;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+section#agenda {
+
+    li {
+        padding-bottom: 10px;    
+    }
+}
+
+section#join {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+input[type="email"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 15px; /* Rounded edges */
+    outline: none; /* Removes the default focus outline */
+}
+
+input[type="email"]:focus {
+    border-color: #0056b3;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
 
 /* Media Query for Mobile Devices */
 @media (max-width: 950px) {
