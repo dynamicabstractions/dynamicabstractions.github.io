@@ -33,6 +33,39 @@ body {
     overflow-y: auto; /* Enables scrolling if content overflows */
 }
 
+.sticky-note {
+    position: sticky;
+    top: 0;
+    right: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.sticky-note p {
+    /* margin-left: auto; */
+    /* margin-right: 40px; */
+    width: 70%;
+    right: 0;
+}
+
+.announcement {
+    max-width: 280px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 90%;
+}
+
 #figure1 {
     grid-column: 3 / 4; /* Right column */
     grid-row: 3 / 10;
@@ -199,6 +232,9 @@ button:hover {
         flex-direction: column;
         width: 80%;
         padding: 50px;
+    }
+    .sticky-note {
+        display: none; /* Hide the figure or adjust as necessary */
     }
 }
 
