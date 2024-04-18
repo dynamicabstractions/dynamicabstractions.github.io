@@ -10,6 +10,7 @@ body {
 }
 
 .grid-container {
+    background-color: #f8f3e8;
     display: grid;
     grid-template-columns: 1fr auto 1fr; /* Adjust as needed */
     /* grid-template-rows: auto 200px auto; Adjust '200px' or use 'auto' or 'fr' units */
@@ -28,7 +29,7 @@ body {
     padding: 70px;
     /* background-color: #f9f9f9;  */
     /* Light background for the content area */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adds shadow for better focus */
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); Optional: Adds shadow for better focus */
     overflow-y: auto; /* Enables scrolling if content overflows */
 }
 
