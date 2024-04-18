@@ -202,12 +202,50 @@ button:hover {
 }
 
 /* Media Query for Mobile Devices */
-/* Media Query for Mobile Devices */
 @media (max-width: 570px) {
     .subscription-form {
         display: flex;
     }
     .subscription-form input, .subscription-form button {
         margin: 10px;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 440px) {
+    .content {
+        padding: 20px;
+    }
+    h1.right-aligned {
+        text-align: center;;
+        margin-right: auto;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 405px) {
+    h1.right-aligned {
+        font-size: 32px;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 380px) {
+    h1.right-aligned {
+        font-size: 28px;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 310px) {
+    h1.right-aligned {
+        font-size: 23px;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 260px) {
+    h1.right-aligned {
+        font-size: 20px;
     }
 }
