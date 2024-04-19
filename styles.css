@@ -34,6 +34,22 @@ nav, ul {
     display: inline;
 }
 
+.nav-links li:nth-child(2) {
+    opacity: 40%;
+}
+
+.nav-links li:nth-child(2):hover {
+    opacity: 100%;
+}
+
+.nav-links li:nth-child(3) {
+    opacity: 40%;
+}
+
+.nav-links li:nth-child(3):hover {
+    opacity: 100%;
+}
+
 .nav-links li a {
     margin-right: 10px;
     color: black;
