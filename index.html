@@ -12,13 +12,21 @@
       <p class="announcement">We will have a meetup at <a href="https://chi2024.acm.org/" target="_blank">CHI'24</a>. Please fill this <a href="" target="_blank">form</a> if you want to join!</p>
     </div>
     <main class="content">
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a tabindex="1" href="./">Home</a></li>
+            <!-- <li><a href="./about">About</a></li> -->
+            <li><a tabindex="2" href="./research">Research</a></li>
+            <li><a tabindex="3" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
         <img class="banner" src="img/image.png">
-        <h1 class="right-aligned">dynamic<br>abstractions</h1>
-        <blockquote class="right-aligned">
-          <!-- ``Quote``
+        <h1 id="title" class="right-aligned">dynamic<br>abstractions</h1>
+        <!-- <blockquote class="right-aligned">
+          ``Quote``
           <br><br>
-          - ?? -->
-        </blockquote>
+          - ??
+        </blockquote> -->
 
         <section id="background" class="section">
           <!-- <h2>background</h2> -->
@@ -35,10 +43,11 @@
             By entrapping us within the fixed boundaries and functionaltiies, static mediums underutilize our cognitive capabilities and hinder our progress as they cannot adapt to the dynamic nature of human thinking.
           </p>
           <p class="left-aligned">
-            With AI and dynamic mediums, we can now develop <strong>dynamic representations and tools</strong>––as seen in recent works like embodied maths and reactive AR visualizations––that enable us to think, create, and communicate in more powerful ways.
+            With AI and dynamic mediums, we can now develop <strong>dynamic representations and tools</strong>––as seen in recent works like <a href="https://www.nsaquib.org/blog/embodied-math" target="_blank">embodied maths</a> and <a href="" target="_blank">reactive AR visualizations</a>––that enable us to think, create, and communicate in more powerful ways.
           </p>
+          <br><br>
           <p class="center-aligned">
-            This working group is committed to bridging this gap and propelling us into the next chapter.
+            This working group is committed to bridging this gap and moving us into the next chapter.
           </p>
         </section>
         <hr class="horizontal-line-long">
@@ -65,6 +74,10 @@
           </div>
         </section>
         <hr class="horizontal-line-short">
+        <section id="agenda" class="section">
+          <h2 class="center-aligned">organizers</h2>
+          <a href="https://rubaiathabib.me/" target="_blank">Rubaiat Habit Kazi</a> (Adobe Research), <a href="https://sanghosuh.github.io/" target="_blank">Sangho Suh</a> (Univ of Toronto), <a href="https://ianarawjo.therottingcartridge.com/index.html" target="_blank">Ian Arawjo</a> (Univ of Montreal), <a href="https://haridecoded.com/" target="_blank">Hari Subramonyam</a> (Stanford Univ), <a href="https://jingyi.me/" target="_blank">Jingyi Li</a> (Pomona), <a href="https://www.nsaquib.org/" target="_blank">Nazmus Saquib</a> (Tero Labs), <a href="https://www.hdang.de/" target="_blank">Hai Dang</a> (Univ of Bayreuth)
+        </section>
         <section id="join" class="center-aligned">
           <h2>join us</h2>
           <div id="discord">
@@ -78,7 +91,7 @@
           <section id="newsletter" class="center-aligned">
             <hr class="horizontal-line-short">
             <h4>newsletter</h4>
-            <p>Sign up for our newsletter to receive updates and news about dynamic abstractions:</p>
+            <p>Sign up for occasional news about meetups, talks, and research related to dynamic abstractions:</p>
             <div class="subscription-form">
               <form action="https://buttondown.email/api/emails/embed-subscribe/dynamic_abstractions" method="POST">
                 <input type="email" name="email" placeholder="Enter your email" required>
@@ -93,14 +106,17 @@
           For any questions, please email to dynamicabstractions [at] gmail [dot] com.
       </section>
     </main>
-    <figure id="figure1" class="figure">
-      <img src="img/image.png" alt="Descriptive Image Text">
-      <figcaption>Image Caption Here</figcaption>
-    </figure>
-    <figure id="figure2" class="figure">
-      <!-- <img src="img/image.png" alt="Descriptive Image Text"> -->
-      <figcaption>Quote</figcaption>
-    </figure>
+    <aside class="right-column">
+      <figure id="figure1" class="figure">
+        <img src="img/math-notation.png" alt="Descriptive Image Text">
+        <figcaption>Rhind Papyrus (1650 BC)</figcaption>
+        <!-- from https://www.mathematicsmagazine.com/Articles/AncientMathematicalTexts.php -->
+      </figure>
+      <figure id="figure2" class="figure">
+        <!-- <img src="img/image.png" alt="Descriptive Image Text"> -->
+        <figcaption>Quote</figcaption>
+      </figure>
+    </aside>
   <script src="script.js"></script>
 </body>
 </html>
