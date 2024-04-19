@@ -142,6 +142,58 @@ nav, ul {
     opacity: 90%;
 }
 
+.team-section {
+    grid-column: 2; /* Assuming this is the middle column */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates a 4-column layout */
+    grid-template-rows: repeat(4, auto); /* Adjust row height based on content */
+    gap: 10px; /* Space between each organizer */
+    padding: 20px; /* Padding around the entire team section */
+}
+
+.organizer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the image and name */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.organizer img {
+    width: 120px;  /* Fixed size for width */
+    height: 120px; /* Fixed size for height, same as width to ensure circle */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 10px; /* Space between image and name */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the transform */
+}
+
+.organizer img:hover {
+    transform: scale(1.1); /* Scales up the image to 110% of its original size */
+    opacity: 0.8; /* Makes the image slightly transparent on hover */
+}
+
+.organizer span {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.organizer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.organizer:hover::after {
+    opacity: 1; /* Show the overlay on hover */
+}
+
 #title {
     margin-bottom: 100px;
 }
@@ -154,7 +206,8 @@ nav, ul {
 
 #figure2 {
     grid-column: 3 / 3; /* Right column */
-    grid-row: 5 / 12; /* Middle row, aligned with the content */
+    grid-row: 4 / 12; /* Middle row, aligned with the content */
+    width: 60%;
 }
 
 .right-column {
@@ -166,12 +219,12 @@ nav, ul {
 
 .figure {
     max-width: 500px;
-    opacity: 75%;
-}
-
-.figure:hover {
     opacity: 100%;
 }
+
+/* .figure:hover {
+    opacity: 100%;
+} */
 
 .figure img {
     max-width: 100%;
@@ -269,11 +322,12 @@ section#agenda {
     li {
         padding-bottom: 10px;    
     }
+    margin-bottom: 50px !important;
 }
 
 section#join {
     background-color:  rgba(196,188,172,0.1);
-    margin-top: 150px;
+    margin-top: 80px;
     padding: 20px;
     border-radius: 14px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
@@ -305,11 +359,17 @@ form button:hover {
 }
 
 /* Media Query for Mobile Devices */
-@media (max-width: 1650px) {
-    figure {
+@media (max-width: 2000px) {
+    #figure1, #figure2 {
         width: 80%;
         margin: 10px;
     }
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 1650px) {
+
 }
 
 
@@ -346,6 +406,12 @@ form button:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .team-section {
+        grid-template-columns: repeat(2, 1fr); /* Switch to a 2x8 layout on smaller screens */
+    }
+}
+
 /* Media Query for Mobile Devices */
 @media (max-width: 570px) {
     .subscription-form {
@@ -359,13 +425,14 @@ form button:hover {
 /* Media Query for Mobile Devices */
 @media (max-width: 440px) {
     .content {
-        padding: 20px;
+        padding: 50px 20px 20px 50px;
     }
     h1.right-aligned {
         text-align: center;;
         margin-right: auto;
     }
     .nav-links li a {
+        font-size:1.2rem;
         margin-right: 3px;
         padding-right: 3px;
     }
