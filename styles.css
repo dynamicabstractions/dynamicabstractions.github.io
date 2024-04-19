@@ -349,6 +349,10 @@ form button:hover {
         text-align: center;;
         margin-right: auto;
     }
+    .nav-links li a {
+        margin-right: 3px;
+        padding-right: 3px;
+    }
 }
 
 /* Media Query for Mobile Devices */
@@ -362,6 +366,18 @@ form button:hover {
 @media (max-width: 380px) {
     h1.right-aligned {
         font-size: 28px;
+    }
+    .nav-links li a {
+        margin-right: 0;
+        padding-right: 0;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 330px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
     }
 }
 
