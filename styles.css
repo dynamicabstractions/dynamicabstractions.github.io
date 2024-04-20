@@ -160,7 +160,7 @@ nav, ul {
 }
 
 .organizer img {
-    width: 120px;  /* Fixed size for width */
+    /* width: 120px;  Fixed size for width */
     height: 120px; /* Fixed size for height, same as width to ensure circle */
     border-radius: 50%; /* Circular images */
     margin-bottom: 10px; /* Space between image and name */
@@ -169,7 +169,8 @@ nav, ul {
 
 .organizer img:hover {
     transform: scale(1.1); /* Scales up the image to 110% of its original size */
-    opacity: 0.8; /* Makes the image slightly transparent on hover */
+    opacity: 0.9; /* Makes the image slightly transparent on hover */
+    cursor: pointer;
 }
 
 .organizer span {
@@ -240,7 +241,7 @@ blockquote {
     margin-bottom: 130px;
 }
 
-p {
+p, div {
    line-height: 1.4;
 }
 
@@ -280,28 +281,6 @@ section {
 
 .content::-webkit-scrollbar {
     display: none;
-}
-
-a {
-    display: inline-block;
-    text-decoration: none;
-    color: #a68a62;
-}
-
-a::after {
-    content: '';
-    width: 0;
-    height: 2px;
-    display: block;
-    /* margin-top: 5px; */
-    background: #af7b21;
-    transition: width 0.3s;
-    left: 0;
-    bottom: 0;
-}
-
-a:hover::after {
-    width: 100%;
 }
 
 .horizontal-line-long {
@@ -358,6 +337,57 @@ form button:hover {
     background-color: #d2a76a;
 }
 
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    width: 400px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.tooltip img {
+    width: 100%;
+}
+
+.tooltip-container:hover .tooltip {
+    visibility: visible; /* Only works on devices that support hover */
+}
+
+.tooltip-container, a {
+    display: inline-block;
+    text-decoration: none;
+    color: #a68a62;
+}
+
+.tooltip-container::after, a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    /* margin-top: 5px; */
+    background: #af7b21;
+    transition: width 0.3s;
+    left: 0;
+    bottom: 0;
+}
+
+.tooltip-container:hover::after, a:hover::after {
+    width: 100%;
+}
+
 /* Media Query for Mobile Devices */
 @media (max-width: 2000px) {
     #figure1, #figure2 {
@@ -366,12 +396,10 @@ form button:hover {
     }
 }
 
-
 /* Media Query for Mobile Devices */
 @media (max-width: 1650px) {
 
 }
-
 
 /* Media Query for Mobile Devices */
 @media (max-width: 1350px) {
